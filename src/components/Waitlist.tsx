@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { Button } from "./ui/Button"
 import { Send, Users } from "lucide-react"
 import { useState } from "react"
+import emailjs from "@emailjs/browser"
 
 export function Waitlist() {
     const [email, setEmail] = useState("")
@@ -14,27 +15,21 @@ export function Waitlist() {
         setStatus('loading')
 
         try {
-            const response = await fetch("https://formspree.io/f/mqaejwnz", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
+            await emailjs.send(
+                "service_9rd3ibm",
+                "template_cl2hhul",
+                {
+                    from_name: name,
+                    from_email: email,
+                    use_case: useCase,
                 },
-                body: JSON.stringify({
-                    email,
-                    name,
-                    useCase,
-                    _subject: `New Waitlist Signup: ${name}`,
-                }),
-            })
+                "YI5N-21WV7XfbSNtV7pUk"
+            )
 
-            if (response.ok) {
-                setStatus('success')
-                setEmail("")
-                setName("")
-                setUseCase("")
-            } else {
-                setStatus('error')
-            }
+            setStatus('success')
+            setEmail("")
+            setName("")
+            setUseCase("")
         } catch (error) {
             console.error("Form submission error:", error)
             setStatus('error')
