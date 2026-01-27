@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Button } from "./ui/Button"
-import { Play } from "lucide-react"
+// import { Play } from "lucide-react"
 
 export function Hero() {
     return (
