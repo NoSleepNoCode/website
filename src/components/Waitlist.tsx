@@ -23,7 +23,7 @@ export function Waitlist() {
                     from_email: email,
                     use_case: useCase,
                 },
-                "MuHA3cm7ECdL2FS7l"
+                "g7ATvX5QRNw0V6X-T"
             )
 
             setStatus('success')
