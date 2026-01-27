@@ -1,5 +1,7 @@
 # Start Right - Marketing Website
 
+[🚀 Deployment Guide](./DEPLOYMENT.md)
+
 > **Start Every Meeting, Every Day, the Right Way.**
 
 **Start Right** is a high-conversion, premium marketing website for the AI-powered Microsoft Teams productivity assistant. It is designed to showcase how the application eliminates context-switching friction by delivering information directly where work happens: **Microsoft Teams**.
