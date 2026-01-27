@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background-primary: #050505;
+  --color-background-secondary: #0f0f12;
+  --color-accent-primary: #6366f1;
+  --color-accent-secondary: #a855f7;
+  --color-accent-teams: #6264A7;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #94a3b8;
+  /* Use underscores for spaces in theme variables if needed, or no spaces for rgba */
+  --color-bg-glass: rgba(255, 255, 255, 0.03);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --background-image-glass-gradient: linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  --shadow-glow-indigo: 0 0 50px -12px rgba(99, 102, 241, 0.25);
+  --shadow-glow-purple: 0 0 50px -12px rgba(168, 85, 247, 0.5);
+}
+
+@layer base {
+  body {
+    @apply bg-background-primary text-text-primary font-sans antialiased selection:bg-accent-primary/30 selection:text-white;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@utility glass {
+  @apply bg-glass-gradient backdrop-blur-xl border border-white/5;
+}
+
+@utility glass-card {
+  @apply glass rounded-2xl p-6 transition-all duration-300;
+}
+
+@utility glow-indigo {
+  @apply shadow-glow-indigo;
+}
+
+@utility glow-purple {
+  @apply shadow-glow-purple;
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-accent-secondary;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
