@@ -1,73 +1,85 @@
-# React + TypeScript + Vite
+# Start Right - Marketing Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Start Every Meeting, Every Day, the Right Way.**
 
-Currently, two official plugins are available:
+**Start Right** is a high-conversion, premium marketing website for the AI-powered Microsoft Teams productivity assistant. It is designed to showcase how the application eliminates context-switching friction by delivering information directly where work happens: **Microsoft Teams**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 The Vision
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Start Right is the ultimate productivity companion for knowledge workers. For V1, the entire user experience is delivered via Microsoft Teams. No new dashboards, no context switching—just intelligence where you work.
 
-## Expanding the ESLint configuration
+## ✨ Core Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Daily Priorities**: Wake up to your top 3 tasks without hunting through JIRA or Outlook.
+- **Meeting Intel**: 60-second briefings before every call with talking points and stakeholder bios.
+- **Ask Anything**: The collective knowledge of your organization, one message away.
+- **Urgent Awareness**: Filter the noise and only hear about what actually needs your attention.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/) + [GSAP](https://gsap.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (Latest LTS recommended)
+- [npm](https://www.npmjs.com/) or [Bun](https://bun.sh/)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd website
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
+
+### Development
+
+Start the development server:
+```bash
+npm run dev
+# or
+bun dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Build the production-ready bundle:
+```bash
+npm run build
 ```
+
+---
+
+## 📂 Project Structure
+
+- `src/components/`: Reusable UI components (Hero, Features, TeamsMockup, etc.).
+- `src/assets/`: Static assets and images.
+- `src/hooks/`: Custom React hooks.
+- `src/index.css`: Global styles and Tailwind configuration.
+
+## 🗺️ Roadmap
+
+- **Phase 1**: Marketing Site Launch + Demo Video.
+- **Phase 2**: Waitlist & Early Access Program.
+- **Phase 3**: Full Teams Bot Integration.
+
+---
+
+Built with ❤️ by the Start Right Team.
