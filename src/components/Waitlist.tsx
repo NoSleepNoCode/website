@@ -5,11 +5,40 @@ import { useState } from "react"
 
 export function Waitlist() {
     const [email, setEmail] = useState("")
+    const [name, setName] = useState("")
+    const [useCase, setUseCase] = useState("")
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        alert(`Signed up with: ${email}`)
-        setEmail("")
+        setStatus('loading')
+
+        try {
+            const response = await fetch("https://formspree.io/f/mqaejwnz", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                    name,
+                    useCase,
+                    _subject: `New Waitlist Signup: ${name}`,
+                }),
+            })
+
+            if (response.ok) {
+                setStatus('success')
+                setEmail("")
+                setName("")
+                setUseCase("")
+            } else {
+                setStatus('error')
+            }
+        } catch (error) {
+            console.error("Form submission error:", error)
+            setStatus('error')
+        }
     }
 
     return (
@@ -37,20 +66,54 @@ export function Waitlist() {
                         Ready to reclaim your time? Join our early access program and be the first to experience the future of productivity.
                     </p>
 
-                    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="Enter your work email"
-                            required
-                            className="flex-1 h-14 bg-white/5 border border-white/10 rounded-full px-8 text-white focus:outline-none focus:border-accent-primary transition-colors text-lg"
-                        />
-                        <Button magnetic size="lg" className="sm:w-auto h-14">
-                            Join Waitlist
-                            <Send className="w-4 h-4 ml-2" />
-                        </Button>
-                    </form>
+                    {status === 'success' ? (
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8 mb-8"
+                        >
+                            <h3 className="text-2xl font-bold text-green-400 mb-2">You're on the list!</h3>
+                            <p className="text-text-secondary">Thanks for joining our waitlist, {name.split(' ')[0]}. We'll be in touch soon.</p>
+                        </motion.div>
+                    ) : (
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md mx-auto">
+                            <input
+                                type="text"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                placeholder="Your Full Name"
+                                required
+                                className="w-full h-14 bg-white/5 border border-white/10 rounded-full px-8 text-white focus:outline-none focus:border-accent-primary transition-colors text-lg"
+                            />
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Work Email Address"
+                                required
+                                className="w-full h-14 bg-white/5 border border-white/10 rounded-full px-8 text-white focus:outline-none focus:border-accent-primary transition-colors text-lg"
+                            />
+                            <textarea
+                                value={useCase}
+                                onChange={(e) => setUseCase(e.target.value)}
+                                placeholder="How do you plan to use Start Right? (e.g. Personal productivity, Team meetings)"
+                                required
+                                className="w-full min-h-[120px] bg-white/5 border border-white/10 rounded-3xl px-8 py-4 text-white focus:outline-none focus:border-accent-primary transition-colors text-lg resize-none"
+                            />
+                            <Button
+                                magnetic
+                                size="lg"
+                                className="h-14 w-full"
+                                disabled={status === 'loading'}
+                            >
+                                {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
+                                <Send className="w-4 h-4 ml-2" />
+                            </Button>
+                            {status === 'error' && (
+                                <p className="text-red-400 text-sm mt-2">Something went wrong. Please try again or email us directly.</p>
+                            )}
+                        </form>
+                    )}
 
                     <p className="text-xs text-text-secondary mt-8 opacity-50">
                         By joining, you agree to our Terms of Service and Privacy Policy.

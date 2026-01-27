@@ -49,7 +49,12 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="flex flex-col sm:flex-row items-center gap-2 mb-12"
                 >
-                    <Button magnetic size="lg" className="w-full sm:w-auto">
+                    <Button
+                        magnetic
+                        size="lg"
+                        className="w-full sm:w-auto"
+                        onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
                         Get Early Access
                     </Button>
                     {/* <Button variant="glass" size="lg" className="w-full sm:w-auto gap-2">

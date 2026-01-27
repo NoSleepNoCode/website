@@ -35,7 +35,11 @@ export function Navbar() {
                     {/* <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
                         Log in
                     </Button> */}
-                    <Button magnetic size="sm">
+                    <Button
+                        magnetic
+                        size="sm"
+                        onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
                         Join Waitlist
                     </Button>
                 </div>
