@@ -19,6 +19,16 @@ Start Right is the ultimate productivity companion for knowledge workers. For V1
 - **Ask Anything**: The collective knowledge of your organization, one message away.
 - **Urgent Awareness**: Filter the noise and only hear about what actually needs your attention.
 
+## 💼 Use Cases Section
+
+The website now includes 3 interactive use case demonstrations showcasing real-world scenarios:
+
+- **Employee Onboarding**: New employees get instant context about projects, people, and processes through natural conversation with 6-8 message Teams chat mockups
+- **Cross-Functional Collaboration**: Instantly understand cross-team dependencies and stakeholder relationships with detailed collaboration mapping
+- **Strategic Decision Context**: Surface historical context and past decisions to inform current strategy with decision archaeology timelines
+
+Each use case features a realistic Microsoft Teams chat mockup with sequential animations, integration icons (Jira, Confluence, GitHub, SharePoint, Slack, Figma), and comprehensive message flows demonstrating GraphRAG capabilities.
+
 ## 🛠️ Tech Stack
 
 - **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
