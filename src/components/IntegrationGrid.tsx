@@ -1,26 +1,29 @@
 import { motion } from "framer-motion"
 import { IntegrationOrbit } from "./IntegrationOrbit"
-import { Github, Mail, MessageSquare, LayoutGrid, Layers, Slack, Figma } from "lucide-react"
+import { LayoutGrid } from "lucide-react"
+import { SiGithub, SiAtlassian, SiSlack, SiFigma } from "react-icons/si"
+import { PiMicrosoftOutlookLogoFill } from "react-icons/pi";
+import { TiVendorMicrosoft } from "react-icons/ti";
 
 const BENTO_ITEMS = [
     {
         title: "Microsoft 365",
         desc: "Seamless integration with Outlook, Calendar, and Teams for instant coordination.",
-        icon: MessageSquare,
+        icon: TiVendorMicrosoft,
         size: "large",
         color: "from-blue-500/20 to-indigo-500/20"
     },
     {
         title: "GitHub",
         desc: "Monitor PRs and Issues.",
-        icon: Github,
+        icon: SiGithub,
         size: "small",
         color: "from-zinc-500/20 to-zinc-800/20"
     },
     {
         title: "Atlassian",
         desc: "Jira & Confluence.",
-        icon: Layers,
+        icon: SiAtlassian,
         size: "small",
         color: "from-blue-600/20 to-cyan-500/20"
     },
@@ -34,21 +37,21 @@ const BENTO_ITEMS = [
     {
         title: "Outlook & Exchange",
         desc: "Email briefs and calendar management.",
-        icon: Mail,
+        icon: PiMicrosoftOutlookLogoFill,
         size: "small",
         color: "from-red-500/20 to-orange-500/20"
     },
     {
         title: "Slack",
         desc: "Instant notifications and team coordination.",
-        icon: Slack,
+        icon: SiSlack,
         size: "small",
         color: "from-purple-600/20 to-pink-500/20"
     },
     {
         title: "Figma",
         desc: "Design collaboration and asset management.",
-        icon: Figma,
+        icon: SiFigma,
         size: "small",
         color: "from-orange-500/20 to-purple-500/20"
     }
