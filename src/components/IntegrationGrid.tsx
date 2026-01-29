@@ -25,7 +25,7 @@ const BENTO_ITEMS = [
         color: "from-blue-600/20 to-cyan-500/20"
     },
     {
-        title: "GraphRAG Engine",
+        title: "Proprietary GraphRAG Engine",
         desc: "The cerebellum of the system—connecting the dots across your entire organization's knowledge base.",
         icon: LayoutGrid,
         size: "medium",

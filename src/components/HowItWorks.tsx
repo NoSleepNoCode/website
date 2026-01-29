@@ -10,7 +10,7 @@ const STEPS = [
     {
         icon: Zap,
         title: "Sync",
-        desc: "Our GraphRAG engine builds your personal knowledge graph, indexing your relationships and priorities."
+        desc: "Our Proprietary GraphRAG engine builds your personal knowledge graph, indexing your relationships and priorities."
     },
     {
         icon: CheckCircle,
