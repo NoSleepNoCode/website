@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { IntegrationOrbit } from "./IntegrationOrbit"
-import { Github, Mail, MessageSquare, LayoutGrid, Layers, Slack } from "lucide-react"
+import { Github, Mail, MessageSquare, LayoutGrid, Layers, Slack, Figma } from "lucide-react"
 
 const BENTO_ITEMS = [
     {
@@ -44,6 +44,13 @@ const BENTO_ITEMS = [
         icon: Slack,
         size: "small",
         color: "from-purple-600/20 to-pink-500/20"
+    },
+    {
+        title: "Figma",
+        desc: "Design collaboration and asset management.",
+        icon: Figma,
+        size: "small",
+        color: "from-orange-500/20 to-purple-500/20"
     }
 ]
 

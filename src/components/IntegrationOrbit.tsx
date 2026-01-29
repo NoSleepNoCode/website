@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { LayoutGrid, Github, Mail, MessageSquare, Database, Share2, Slack } from "lucide-react"
+import { LayoutGrid, Github, Mail, MessageSquare, Database, Share2, Slack, Figma } from "lucide-react"
 
 const ICONS = [
     { icon: Github, color: "#24292e", label: "GitHub" },
@@ -8,6 +8,7 @@ const ICONS = [
     { icon: Database, color: "#00A4EF", label: "Office 365" },
     { icon: Share2, color: "#0078D4", label: "SharePoint" },
     { icon: Slack, color: "#4A154B", label: "Slack" },
+    { icon: Figma, color: "#F24E1E", label: "Figma" },
     { icon: LayoutGrid, color: "#6366f1", label: "Start Right" },
 ]
 
