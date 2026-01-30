@@ -12,7 +12,7 @@ const UNIVERSAL_SEARCH_MESSAGES = [
     sender: 'Engineer',
     type: 'user',
     content:
-      "I'm looking for API documentation. Where are the latest specs for the payment gateway?",
+      "I'm looking for Front-End API documentation for the website. Where are the latest specs for the payment gateway?",
   },
   {
     id: 2,
