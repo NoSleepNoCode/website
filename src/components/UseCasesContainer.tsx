@@ -3,6 +3,7 @@ import { UseCaseSection } from './UseCaseSection'
 import { OnboardingMockup } from './mockups/OnboardingMockup'
 import { DecisionContextMockup } from './mockups/DecisionContextMockup'
 import { UniversalSearchMockup } from './mockups/UniversalSearchMockup'
+import { DocumentStalenessMockup } from './mockups/DocumentStalenessMockup'
 
 export function UseCasesContainer() {
   return (
@@ -51,6 +52,16 @@ export function UseCasesContainer() {
           subtitle="Historical Context & Decision Archaeology"
           description="Surface historical context and past decisions to inform current strategy. Start Right remembers why choices were made, who was involved, and what trade-offs were considered—turning institutional memory into institutional intelligence."
           mockupComponent={DecisionContextMockup}
+        />
+
+        {/* Use Case 4: Document Staleness */}
+        <UseCaseSection
+          id="document-staleness"
+          title="Keep Knowledge Fresh, Automatically"
+          subtitle="AI-Powered Document Staleness Detection"
+          description="Never let critical documentation go stale again. Start Right continuously monitors your knowledge base, detects outdated content by correlating with code changes, system updates, and team discussions—then identifies the right people to keep everything current."
+          mockupComponent={DocumentStalenessMockup}
+          reverse={true}
         />
       </div>
     </section>
