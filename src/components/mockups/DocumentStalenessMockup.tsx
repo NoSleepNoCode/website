@@ -1,6 +1,5 @@
 import { BaseTeamsMockup } from './BaseTeamsMockup'
-import { ConfluenceIcon, SharePointIcon, EmailIcon, CalendarIcon } from '../ui/CustomIcons'
-import { AlertTriangle, Clock, RefreshCw } from 'lucide-react'
+import { ConfluenceIcon, SharePointIcon } from '../ui/CustomIcons'
 
 const STALENESS_MESSAGES = [
   {
