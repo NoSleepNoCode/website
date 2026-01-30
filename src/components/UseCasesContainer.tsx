@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { UseCaseSection } from './UseCaseSection'
 import { OnboardingMockup } from './mockups/OnboardingMockup'
-import { CollaborationMockup } from './mockups/CollaborationMockup'
 import { DecisionContextMockup } from './mockups/DecisionContextMockup'
+import { UniversalSearchMockup } from './mockups/UniversalSearchMockup'
 
 export function UseCasesContainer() {
   return (
@@ -34,13 +34,13 @@ export function UseCasesContainer() {
           mockupComponent={OnboardingMockup}
         />
 
-        {/* Use Case 2: Collaboration */}
+        {/* Use Case 2: Universal Search */}
         <UseCaseSection
-          id="collaboration"
-          title="Break Down Silos, Build Connections"
-          subtitle="Cross-Functional Coordination"
-          description="Instantly understand cross-team dependencies and stakeholder relationships. Start Right surfaces who's working on what, identifies blockers before they slow you down, and connects you with the right people at the right time."
-          mockupComponent={CollaborationMockup}
+          id="universal-search"
+          title="Find Anything, Instantly"
+          subtitle="Universal Document Search"
+          description="Search across all your tools and repositories from one place. Start Right indexes documents from Confluence, SharePoint, Jira, GitHub, and more—giving you instant access to the information you need, no matter where it lives."
+          mockupComponent={UniversalSearchMockup}
           reverse={true}
         />
 
